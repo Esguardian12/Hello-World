@@ -1,5 +1,12 @@
 #include <iostream>
 
+namespace first{
+    int e = 1;
+}
+namespace second{
+    int e = 2;
+}
+
 int main(){
     std::cout << "I like pizza!" << std::endl;       //std::cout starts the line.         std::endl ends the line.
     std::cout << "It's really good!" << std::endl;
@@ -50,6 +57,23 @@ int main(){
     std::cout << "It's " << day << '\n';
     std::cout << "You are " << age << " years old" << '\n';
 
+     /* Namespace = provides a solution for preventing name conflicts in large projects.
+    *              Each entity needs a unique name. A namespace allows for identically 
+    *              named entities as long as the namespace are different.
+    */
+
+    // int e = 0;
+    // std::cout << first:: e << '\n';
+    // std::cout << second:: e;
+
+//    using namespace second;
+//    using namespace std;           // The reason people use this in typing 
+    using std::cout;              // This is a better alternative than using namespace, the namespace is there for an example.
+    using std::string;
+
+    std::cout << first::e << '\n';
+
+    std::cout << "Hello " << name;
 
     return 0;
 }
